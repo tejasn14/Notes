@@ -115,7 +115,41 @@ function maxSubarraySum(arr, num) {
 
 ---
 
-### 4. Divide and Conquer
+### 4. Recursion
+
+
+Every recursive function needs 2 things
+- Base case
+- Difference input 
 
 ```js
+function sumRange(num){
+    if(num === 1)return 0;
+    return num + sumRange(num - 1); 
+}
 ```
+---
+#### Helper method recursion
+an outer function which is not recursive calls an inner function which is recursive  
+This is done when you need to collect value ( like odd values in the example below )
+```js
+function collectOddValues(arr){
+    let result = [];
+
+    function helper(helperInput){
+        if(helperInput.length === 0) 
+            return;
+        else if(helperInput[0] % 2 !== 0) 
+            result.push(helperInput[0]);
+        helper(helperInput.slice(1))
+    }
+
+    helper(arr);
+
+    return result;
+}
+collectOddValues([1,2,3,4,5,6,7])
+```
+---
+solving the above problem in pure recursion 
+

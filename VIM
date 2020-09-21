@@ -1,0 +1,81 @@
+dt'		  	- deletes untill ' excluding '
+df'		  	- deletes untill ' including '
+fa		  	- find a character 'a' in the line
+3fa		  	- finds the 3rd occurance of the character 'a' in the line
+;		  	- go to the next character in the line 
+3;		  	- go to the 3rd occurance of the character
+,		  	- go to the previous character in the line
+:sp		  	- horizontally split the same file
+:sp a.txt	  	- horizontally split the file specified
+:vsp		  	- vertically split the same file 			
+:res +5		  	- increase size vertically by +5
+:vertical resize +5  	- increase size horizontally by +5
+{		  	- move by paragraph up 
+}		  	- move by paragraph down 
+CTRL - D 	  	- move down half page
+CTRL - U 	  	- move up half page
+CTRL - O 	  	- previous cursor position 
+CTRL - I 	  	- next cursor position
+2/baby 		  	- sends you flying to the second occurrence of baby in a document
+gd 		  	- jump of defenition of method
+gf  		  	- jump to the file under the import 
+20gg		  	- go to the line 20
+ggdG		  	- deletes the whole document
+ggyG		  	- copies the whole document
+d/hello 	  	- delete everything until the first occurrence of 'hello'
+ciw'Ctrl+r"' 	  	- put selected word inside single quotes
+gUw		  	- capitalize a word
+guw		  	- de-capitalize a word
+cc 		  	- change whole line
+:r 		  	- reads and write below the cursor
+:r !ls 		  	- writes the output of ls and writes it below the cursor
+:s/thee/the	  	- replace 1st occurance of 'thee' with 'the' in the line
+:s/thee/the/g	  	- replace all occurance of 'thee' with 'the' in the line
+:%s/thee/the/g	  	- replace all occurance of 'thee' with 'the' in the file 
+:%s/thee/the/gc	  	- replace all occurance of 'thee' with 'the' in the file with prompt 
+daw		  	- delete around word
+ciw		  	- change inner word
+dab 		  	- delete around (
+daB 		  	- delete around { 
+dat 		  	- delete an HTML tag
+		- Imagine that you want to delete all occurrences of cucumber. A possible approach would be to search for cucumber /cucumber, delete it with daw and, from then on,
+		  use n to go to the next match and . to delete it! Two keystrokes!?! Again think of the possibilities!!
+~ 		  	- switch case for a single character
+D		  	- deletes from the current position to the end of the line
+:e .		  	- open netrw (dir structure) -- same as nerdtree -- where you can select a file to edit
+when inside netrw %  	- creates new file there
+:buffers 	  	- shows all the open buffers - each of these have numbers associated with them
+:b1		  	- switch to buffer 1 = where '1' is the buffer number 
+:bd		  	- buffer delete - close the file
+:find a.	  	- to find files
+:enew			- create new buffer in new vim window 
+:new			- create new buffer in horizontal split 
+:vnew			- create new buffer in vertical split  
+:badd a.txt 		- will add a.txt to the buffer list without opening the file
+:3,5bd			- will delete buffers 3 and 5
+:bn			- go to next buffer
+:bp			- go to pervious buffer
+:sbn			- to open the next buffer in horizontal split
+:bunload 		- unloads the file in view - useful when undoing splits
+:blast 			- opens the last buffer (there is a similar bfirst)
+:sblast 		- opens the last buffer in horizontal split
+:ball			- opens all the files in buffer in horizontal split
+:mksession ~/mysession.vim   - save all the buffers and line numbers as a session
+:source ~/mysession.vim OR
+$ vim -S ~/mysession.vim - open the session (the saves the line number you were in and all the files that were open)
+:tab ball		- show each buffer in tabs
+gt 			- go to next tab
+gT 			- go to previous tab
+2gt			- go to second tab
+tabm 0 			- move the current tab to the first 
+tabm  			- move the current tab to the last 
+:ds'			- deletes the surrounding '
+:cs'"			- change the surrounding ' to "
+:ysiw"			- surround " around the word
+:ysw"			- surround " from the current word to the end
+:gcc			- comment line
+:5gcc			- comment 5 lines
+:gcap  			- comment paragraph
+selection + :gc		- comment visually selection
+selection + :sort i 	- case insensitive sort
+selection + :sort u 	- sort and remove duplicates 
